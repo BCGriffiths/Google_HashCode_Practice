@@ -16,4 +16,4 @@ class intersection:
             self.in_streets[self.curr_street - 1].robot.state = False
         else :
             self.current_time += 1
-            self.in_streets[self.curr_street].queue.top.moveAcrossIntersection()
+            self.in_streets[self.curr_street].robot.queue.top.moveAcrossIntersection()
