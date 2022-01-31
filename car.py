@@ -30,7 +30,7 @@ class Car:
         for i in range(len(route_data) - 1):
             for s in all_streets:
                 if s.name == route_data[i + 1]:
-                    route.append(s)
+                    self.route.append(s)
                     break
 
 
