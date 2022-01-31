@@ -12,8 +12,8 @@ class intersection:
         if self.current_time == self.curr_street.robot.time:
             self.curr_street += 1
             self.current_time = 0
-            self.in_streets[self.curr_street].robot.enabled = True
-            self.in_streets[self.curr_street - 1].robot.enabled = False
+            self.in_streets[self.curr_street].robot.state = True
+            self.in_streets[self.curr_street - 1].robot.state = False
         else :
             self.current_time += 1
             self.in_streets[self.curr_street].queue.top.moveAcrossIntersection()
