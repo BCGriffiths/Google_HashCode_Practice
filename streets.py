@@ -1,6 +1,4 @@
 class street:
-    start_loc = NULL
-
 
     def __init__(self, start_loc, end_loc, name, time):
         self.start_loc = start_loc
