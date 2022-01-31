@@ -25,15 +25,13 @@ class Car:
         self.current_street_index += 1
 
     def loadRouteData(self, route_data_string, all_streets):
-        num_pos = route_data_string.find(" ")
-        num = route_data_string[0:num_pos]
-
-        for i in range(num):
-            space_pos = route_data_string.find(" ")
-            value = route_data_string[0:space_pos]
-            
+        route_data = route_data_string.split()
+                    
+        for i in range(len(route_data) - 1):
             for s in all_streets:
-                if s.name == value:
+                if s.name == route_data[i + 1]:
                     self.route.append(s)
+                    break
+
 
         
