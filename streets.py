@@ -1,4 +1,7 @@
 class street:
+    start_loc = NULL
+
+
     def __init__(self, start_loc, end_loc, name, time):
         self.start_loc = start_loc
         self.end_loc = end_loc
@@ -16,3 +19,10 @@ class street:
 
     def getTime(self):
         return self.time
+
+    def loadStreetData(self, input_string):
+        string_list = input_string.split()
+        self.start_loc = string_list[0]
+        self.end_loc = string_list[1]
+        self.name = string_list[2]
+        self.time = string_list[3]
