@@ -3,7 +3,9 @@ from asyncio.windows_events import NULL
 
 class intersection:
     id = 0
+    #a list of order indexes of in_streets
     schedule = []
+    #list of streets coming in intersection
     in_streets = []
     curr_street = 0
     curr_time = 0
@@ -20,4 +22,4 @@ class intersection:
 
         else :
             self.current_time += 1
-            self.in_streets[self.schedule[self.curr_street]].robot.queue.top.moveAcrossIntersection()
+            self.in_streets[self.schedule[self.curr_street]].robot.cars_queued.nextCar().moveAcrossIntersection()

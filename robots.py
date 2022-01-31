@@ -20,5 +20,8 @@ class robot:
     def addCarQueued(self, add_car):
         self.cars_queued.append(add_car)
 
-    def popCarQueued(self):
+    #returns next car in queue and removes it
+    def nextCar(self):
+        next_car = self.cars_queued[0]
         self.cars_queued.pop(0)
+        return next_car
